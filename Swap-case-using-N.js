@@ -36,3 +36,5 @@ function swap (string, positiveInteger) {
       : letter.toLowerCase()
   })
 }
+
+// or
