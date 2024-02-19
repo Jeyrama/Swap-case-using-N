@@ -22,3 +22,17 @@ More examples:
 
 
 // Solution
+
+function swap (string, positiveInteger) {
+  const bits = Number(positiveInteger).toString(2)
+  let index = 0
+  
+  return string.replace(/[a-z]/gi, letter => {
+    if (index >= bits.length) index = 0
+    if (bits[index++] === '0') return letter
+    
+    return letter > "Z"
+      ? letter.toUpperCase()
+      : letter.toLowerCase()
+  })
+}
