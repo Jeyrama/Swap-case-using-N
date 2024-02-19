@@ -19,3 +19,6 @@ More examples:
   swap("", 11345)                   -->  ""
   swap("the lord of the rings", 0)  -->  "the lord of the rings"
 */
+
+
+// Solution
