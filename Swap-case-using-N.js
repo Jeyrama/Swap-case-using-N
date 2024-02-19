@@ -38,3 +38,23 @@ function swap (string, positiveInteger) {
 }
 
 // or
+
+function swapcase(str){
+  return /[a-z]/.test(str) ? str.toUpperCase() : str.toLowerCase()
+}
+
+function swap(s, n){
+  let ans = ""
+  let st = n.toString(2)
+  let j = 0;
+  for(let i = 0; i < s.length; i++){
+    if(/[a-z]/i.test(s[i])){
+      if(st[j] == '1') ans += swapcase(s[i])
+      else             ans += s[i]
+      j = (j + 1) % st.length
+    } else{
+      ans += s[i]
+    }
+  }
+  return ans
+}
